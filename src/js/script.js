@@ -49,9 +49,9 @@
     }
     render() {
       const thisBooksList = this;
-    //pętla po każdym elemencie z dataSource.books
-    for (let book of thisBooksList.data) {
-      const ratingBgc = thisBooksList.determineRatingBgc(book.rating);
+      //pętla po każdym elemencie z dataSource.books
+      for (let book of thisBooksList.data) {
+        const ratingBgc = thisBooksList.determineRatingBgc(book.rating);
         const ratingWidth = book.rating * 10;
         const generatedHTML = templates.bookTemplate ({
           id: book.id,
@@ -114,7 +114,7 @@
     }
     filterBooks() {
       const thisBooksList = this;
-      for (let book of this.data){
+      for (let book of thisBookList.data){
         let shouldBeHidden = false;
         for(const filter of thisBooksList.filters) {
           if(!book.details[filter]) {
